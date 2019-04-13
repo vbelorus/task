@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+    php:
+        image: ${REGISTRY_URL}${REPOSITORY_NAME}php:${DOCKER_TAG}
+        build:
+            context: './../'
+            dockerfile: 'docker/php/Dockerfile'
+        restart: unless-stopped
